@@ -3,8 +3,8 @@ from datetime import datetime
 import smtplib
 import time
 
-MY_LAT = 31.520370 # Your latitude
-MY_LONG = 74.358749 # Your longitude
+MY_LAT = ""# Your latitude
+MY_LONG = ""# Your longitude
 
 def is_iss_overhead():
     response = requests.get(url="http://api.open-notify.org/iss-now.json")
@@ -41,14 +41,14 @@ while True:
         with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
 
-            my_email = "hasnainsaleem821@gmail.com"
-            password1 = "wahbuzazvbrrevca"
+            my_email = ""
+            password1 = ""
             
             # print(rand_quote)
             connection.login(user= my_email, password= password1)
             connection.sendmail(
                 from_addr= my_email, 
-                to_addrs= "hasnainsaleem18@outlook.com", 
+                to_addrs= "", 
                 msg= "Subject:Look Up\n\nThe ISS is above you."
                 
             )
